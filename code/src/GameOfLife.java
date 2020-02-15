@@ -42,7 +42,7 @@ public class GameOfLife {
     // Getters
     public int[][] getBoard() {
         // your code goes here
-        return board;
+        return board.clone();
     }
 
     public int getSize() {
@@ -50,11 +50,13 @@ public class GameOfLife {
         return size;
     }
 
+
+
     // Other methods that are relevant to your work with this type
     public void printBoard() {
-        for(int i=0; i<board.length; i++){ // two for loops to print
-            for( int j=0; j<board.length; j++){
-                System.out.println(board[i][j]); //this prints out value at i,j
+        for (int i = 0; i < size; i ++) { // two for loops to print
+            for (int j = 0; j < size; j++) {
+                System.out.println(previous[i][j] + " "); //this prints out value at i,j
             }
         }
 
@@ -106,6 +108,7 @@ public class GameOfLife {
     public int evolution(int num) {
         for (int i=0; i<num; i++) {
             oneStep();
+
         }
         return num;
     }
