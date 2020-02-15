@@ -80,10 +80,20 @@ public class GameOfLife {
         copyToPrevious();
     }
 
-    public int neighbors(int row, int column) {
+    public int neighbors(int r, int c) {
         // checks the number of neighbors of element at indices row and column in previous
+        int numOfNeighbors = 0;
+        // let's check the potential 8 neighbors of the cell at index (rox, column)
+        if (r-1 >=0 && c-1 >= 0 && previous[r-1][c-1]==1) numOfNeighbors++;
+        if (r-1 >=0 && previous[r-1][c]==1) numOfNeighbors++;
+        if (r-1 >=0 && c+1 < size && previous[r-1][c+1]==1) numOfNeighbors++;
+        if (r+1 < size && c-1 >= 0 && previous[r+1][c-1]==1) numOfNeighbors++;
+        if (r+1 < size && previous[r+1][c]==1) numOfNeighbors++;
+        if (r+1 < size && c+1 < size && previous[r+1][c+1]==1) numOfNeighbors++;
+        if (c-1 >= 0 && previous[r][c-1]==1) numOfNeighbors++;
+        if (c+1 < size && previous[r][c+1]==1) numOfNeighbors++;
         // returns this number
-        return 0;
+        return numOfNeighbors;
     }
 
     public void copyToPrevious() {
