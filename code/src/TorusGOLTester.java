@@ -23,17 +23,22 @@ class TorusGOLTester {
         gol.evolution(1);
         assertArrayEquals(outcome, gol.getBoard());
     }
-  /*  @Test
-    public void evolution() {
-        GameOfLife gol = new GameOfLife();
+    @Test
+    public void testEvolution() {
         int[][] A = {
                 {0,0,0},
                 {0,1,0},
                 {0,0,0}};
-        assertEquals(1,gol.getBoard(A));
+        int [][] B = {
+                {0, 0, 0},
+                {0, 0, 0},
+                {0, 0, 0}};
+        GameOfLife x = new GameOfLife(A);
+        x.evolution(1);
+        assertArrayEquals(B,x.getBoard());
     }
 
-   */
+
     public static void main(String[] args) {
         int[][] board = {
                 {0, 0, 0, 0, 0},

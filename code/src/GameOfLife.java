@@ -13,19 +13,18 @@ public class GameOfLife {
         previous = new int[size][size];
     }
 
-    public GameOfLife(int[][] board) {
-        board = new int[board.length][board.length];
-        previous = new int[board.length][board.length];
+    public GameOfLife(int[][] board2) {
+        this.size = board2.length;
+        this.board = new int[board2.length][board2.length];
+        this.previous = new int[board2.length][board2.length];
        //this.board = board; // copy board addresses: cheap but dangerous approach
        for (int i=0; i<board.length; i++) {
-           for (int j=0; j<board[0].length; i++) {
-               this.board[i][j] = board[i][j];
-               previous[i][j] = board[i][j];
+           for (int j=0; j<board.length; j++) {
+                   this.board[i][j] = board2[i][j];
+                    this.previous[i][j] = board2[i][j];
            }
        }
-       size = board.length;
     }
-
     // Setters
     public void setBoard(int[][] board) {
         board = new int[board.length][board.length];
