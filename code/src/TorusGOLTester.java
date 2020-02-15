@@ -100,7 +100,7 @@ class TorusGOLTester {
     public void testOneStep1(){
         int [][] A =
                         {{0,0,0,1},
-                         {0,0,0,0},
+                         {1,0,0,0},
                          {0,0,0,0}};
         int [][] B =
                         {{0,0,0},
