@@ -103,9 +103,10 @@ public class GameOfLife {
         }
     }
 
-    public void evolution(int num) {
+    public int evolution(int num) {
         for (int i=0; i<num; i++) {
             oneStep();
         }
+        return num;
     }
 }
