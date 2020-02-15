@@ -52,10 +52,9 @@ public class GameOfLife {
 
     // Other methods that are relevant to your work with this type
     public void printBoard() {
-        int [][] boardPrint = this.board; // this points out the board
         for(int i=0; i<board.length; i++){ // two for loops to print
             for( int j=0; j<board.length; j++){
-                System.out.println(boardPrint[i][j]); //this prints out value at i,j
+                System.out.println(board[i][j]); //this prints out value at i,j
             }
         }
 
